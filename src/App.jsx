@@ -107,7 +107,7 @@ function App() {
             </div>
 
             <div className="shadow-md">
-              <div className="text-center flex flex-row justify-center mt-[5%] p-8 rounded-lg ">
+              <div className="text-center flex flex-wrap flex-row justify-center mt-[5%] p-8 rounded-lg ">
                 <input
                   type="text"
                   className="w-[50%] bg-white rounded-lg h-[40px] border-2 border-gray-300 px-4 focus:outline-none focus:border-blue-500"
@@ -130,6 +130,8 @@ function App() {
                   ADD
                 </button>
                 <button
+                id="modifybutton"
+
                   onClick={() => {
                     const checkboxes = document.querySelectorAll(
                       'input[type="checkbox"]:checked'
@@ -143,6 +145,8 @@ function App() {
                   MODIFY
                 </button>
                 <button
+                id="deletebutton"
+
                   onClick={deleteSelected}
                   className="ml-4 px-6 py-2 bg-black text-white rounded-lg hover:bg-neutral-700 focus:outline-none transition-all duration-300"
                 >

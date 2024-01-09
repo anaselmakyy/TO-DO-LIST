@@ -19,6 +19,17 @@ body{
 .childs{
   justify-content: center !important;
   text-align: center !important;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (max-width: 750px) {
+#modifybutton{
+  margin-top: 2%;
+}
+#deletebutton{
+  margin-top: 2%;
+}
 }
 
 
@@ -76,17 +87,5 @@ body{
   margin-right: 10px;
 }
 
-#modifybutton {
-  background-color: #2196f3; /* Blue */
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#modifybutton:hover {
-  background-color: #1565c0; /* Dark Blue */
-}
 
 
