@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.title{
+  font-family: 'Times New Roman', Times, serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-child{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+body{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.child{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.childs{
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+
+/* Add this to your App.css or create a new CSS file */
+
+.todo-item {
+  background-color: #81c784; /* Light Green */
+  border: 2px solid #4caf50; /* Dark Green */
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: background-color 0.3s ease;
+}
+
+.todo-item:hover {
+  background-color: #4caf50; /* Dark Green */
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  margin-right: 10px;
+  appearance: none;
+  border: 2px solid #4caf50; /* Dark Green */
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox-input:checked::before {
+  content: '\2713'; /* Checkmark */
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.paragraph {
+  margin: 0;
+  flex-grow: 1;
+  color: #333;
+}
+
+#modifyinput {
+  margin-right: 10px;
+}
+
+#modifybutton {
+  background-color: #2196f3; /* Blue */
   color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+#modifybutton:hover {
+  background-color: #1565c0; /* Dark Blue */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
